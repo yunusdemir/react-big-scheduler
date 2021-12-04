@@ -10,8 +10,12 @@ module.exports = {
       'webpack-dev-server/client?http://localhost:8080/',
       'webpack/hot/only-dev-server',
       'babel-polyfill',
-      './example/bundle.js'
+      './example/bundle.js',
+        './src/css/style.css'
     ]
+  },
+  devServer: {
+    static: "./example/"
   },
   output: {
     path: __dirname,
@@ -26,7 +30,7 @@ module.exports = {
   },
   module: {
   rules: [
-    { test: /\.jsx$|\.es6$|\.js$/, loaders: ['babel-loader'], exclude: /node_modules/ },
+    { test: /\.jsx$|\.es6$|\.js$/, exclude: /node_modules/, use: { loader: 'babel-loader' }},
     {
       test: /\.scss$|\.css$|\.less$/,
       use: [
@@ -42,13 +46,15 @@ module.exports = {
         {
           loader: 'less-loader',
           options: {
-            javascriptEnabled: true,
+            lessOptions: {
+              javascriptEnabled: true,
+            }
           },
         },
       ],
     },
-    { test: /\.(jpe?g|png|gif)$/i, loader: 'url?limit=10000!img?progressive=true' },
-    { test: /\.json/, loader: 'json-loader', exclude: /node_modules/ }
+    { test: /\.(jpe?g|png|gif)$/i, use: { loader: 'url?limit=10000!img?progressive=true' }},
+    { test: /\.json/, use: {loader: 'json-loader'}, exclude: /node_modules/ }
   ]},
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
