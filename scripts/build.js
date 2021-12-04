@@ -19,7 +19,7 @@ const appendFile = util.promisify(require('fs').appendFile);
 async function build() {
   const root = path.resolve(__dirname, '..');
   const sourceDir = path.resolve(root, 'src');
-  const targetDir = path.resolve(root, 'lib');
+  const targetDir = path.resolve(root, 'dist');
   const jsTarget = targetDir;
   const cssTarget = path.resolve(targetDir, 'css');
   const hackFileName = 'antd-globals-hiding-hack'
