@@ -1,8 +1,7 @@
 import React, {Component} from 'react'
-import {PropTypes} from 'prop-types' 
 import moment from 'moment'
 //import 'moment/locale/zh-cn';
-import Scheduler, {SchedulerData, ViewTypes, DATE_FORMAT, DemoData} from '../src/index'
+import Scheduler, {DATE_FORMAT, DemoData, SchedulerData, ViewTypes} from '../src'
 import Nav from './Nav'
 import ViewSrcCode from './ViewSrcCode'
 import withDragDropContext from './withDnDContext'

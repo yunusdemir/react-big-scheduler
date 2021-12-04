@@ -9,8 +9,6 @@ import DnDSource from "./DnDSource";
 import DnDContext from "./DnDContext";
 import AddMorePopover from "./AddMorePopover";
 import DemoData from "./DemoData";
-import {Component} from "react";
-
 declare class Scheduler extends Component<any, any, any> {
     static propTypes: {
         schedulerData: any;
@@ -71,5 +69,5 @@ declare class Scheduler extends Component<any, any, any> {
     handleVisibleChange: (visible: any) => void;
     onSelect: (date: any) => void;
 }
-
+import { Component } from "react";
 export { SchedulerData, ViewTypes, CellUnits, SummaryPos, DnDSource, DnDContext, AddMorePopover, DemoData };

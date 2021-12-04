@@ -14,5 +14,4 @@ declare class AgendaResourceEvents extends Component<any, any, any> {
     };
     constructor(props: any);
 }
-
-import {Component} from "react";
+import { Component } from "react";

@@ -1,11 +1,10 @@
 import React, {Component} from 'react'
-import {PropTypes} from 'prop-types' 
 //import moment from 'moment'
 //import 'moment/locale/zh-cn';
 import Col from 'antd/lib/col'
 import Row from 'antd/lib/row'
 import Button from 'antd/lib/button'
-import Scheduler, {SchedulerData, ViewTypes, DATE_FORMAT, DemoData} from '../src/index'
+import Scheduler, {DemoData, SchedulerData, ViewTypes} from '../src'
 import Nav from './Nav'
 import ViewSrcCode from './ViewSrcCode'
 import withDragDropContext from './withDnDContext'

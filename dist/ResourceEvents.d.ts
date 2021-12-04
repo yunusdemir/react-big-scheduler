@@ -28,5 +28,4 @@ declare class ResourceEvents extends Component<any, any, any> {
     eventContainerRef: (element: any) => void;
     eventContainer: any;
 }
-
-import {Component} from "react";
+import { Component } from "react";

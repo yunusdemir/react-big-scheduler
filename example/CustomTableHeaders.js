@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
-import {PropTypes} from 'prop-types'
-import Scheduler, {DemoData, SchedulerData, ViewTypes} from '../src/index'
+import Scheduler, {DemoData, SchedulerData, ViewTypes} from '../src'
 import Nav from './Nav'
 import ViewSrcCode from './ViewSrcCode'
 import withDragDropContext from './withDnDContext'

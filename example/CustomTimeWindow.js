@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
-import {PropTypes} from 'prop-types'
 import moment from 'moment'
-import Scheduler, {SchedulerData, ViewTypes, CellUnits, DemoData, DATE_FORMAT} from '../src/index'
+import Scheduler, {CellUnits, DATE_FORMAT, DemoData, SchedulerData, ViewTypes} from '../src'
 import Nav from './Nav'
 import ViewSrcCode from './ViewSrcCode'
 import withDragDropContext from './withDnDContext'

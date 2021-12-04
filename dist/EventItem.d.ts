@@ -41,5 +41,4 @@ declare class EventItem extends Component<any, any, any> {
     endResizable: (props: any) => boolean;
     subscribeResizeEvent: (props: any) => void;
 }
-
-import {Component} from "react";
+import { Component } from "react";

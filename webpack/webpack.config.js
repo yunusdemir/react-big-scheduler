@@ -6,7 +6,7 @@ const path = require('path')
 
 const root = path.resolve(__dirname, '..')
 module.exports = {
-    mode:'production',
+    mode: 'production',
     entry: {
         bundle: [root + "/example/bundle.js"],
     },
@@ -25,10 +25,15 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.jsx$|\.es6$|\.js$/, exclude: /node_modules/, use: { loader: 'babel-loader' }},
-            { test: /\.scss$|\.css$/, loader: 'style-loader!style-loader!css-loader!sass-loader'},
-            { test: /\.(jpe?g|png|gif)$/i, loader: 'url?limit=10000!img?progressive=true' },
-            { test: /\.json/i, type: 'javascript/auto', loader: 'json-loader' }
+            {test: /\.js|\.jsx$/, exclude: /node_modules/, use: {loader: 'babel-loader'}},
+            {
+                test: /\.scss$|\.css$/,
+                use: [{loader: 'style-loader'}, {loader: "style-loader"}, {loader: "css-loader"}, {loader: "sass-loader"}
+                ]
+            },
+
+            {test: /\.(jpe?g|png|gif)$/i, use: {loader: 'url?limit=10000!img?progressive=true'}},
+            {test: /\.json/i, type: 'javascript/auto', use: {loader: 'json-loader'}}
         ]
     },
     // module: {
@@ -63,7 +68,7 @@ module.exports = {
         //     context: root,
         //     manifest: require('../exampledist/static/vendors-manifest.json')
         // }),
-        new webpack.optimize.OccurrenceOrderPlugin(),
+        // new webpack.optimize.OccurrenceOrderPlugin(),
         // new webpack.optimize.UglifyJsPlugin({
         //     output: {
         //         comments: false,  // remove all comments
