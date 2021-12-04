@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import {PropTypes} from 'prop-types'
 import Col from 'antd/lib/col'
 import Row from 'antd/lib/row'
-import 'antd/lib/grid/style/index.css'
 
 class EventItemPopover extends Component {
     constructor(props) {
@@ -62,7 +61,7 @@ class EventItemPopover extends Component {
                             <span className="header2-text" style={{color: '#108EE9', cursor: 'pointer'}} onClick={() => {viewEventClick(schedulerData, eventItem);}}>{viewEventText}</span><span className="header2-text" style={{color: '#108EE9', cursor: 'pointer', marginLeft: '16px'}} onClick={() => {viewEvent2Click(schedulerData, eventItem);}}>{viewEvent2Text}</span>
                         </Col>
                     )
-                };
+                }
                 opsRow = (
                     <Row type="flex" align="middle">
                         <Col span={2}>
