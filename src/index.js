@@ -27,14 +27,14 @@ import {PropTypes} from 'prop-types'
 import Col from 'antd/lib/col'
 import Row from 'antd/lib/row'
 import Icon from 'antd/lib/icon'
-import 'antd/lib/select/style/index.css'
-import 'antd/lib/grid/style/index.css'
+// import 'antd/lib/select/style/index.css'
+// import 'antd/lib/grid/style/index.css'
 import Radio from 'antd/lib/radio'
-import 'antd/lib/radio/style/index.css'
+// import 'antd/lib/radio/style/index.css'
 import Popover from 'antd/lib/popover'
-import 'antd/lib/popover/style/index.css'
+// import 'antd/lib/popover/style/index.css'
 import Calendar from 'antd/lib/calendar'
-import 'antd/lib/calendar/style/index.css'
+// import 'antd/lib/calendar/style/index.css'
 import EventItem from './EventItem'
 import DnDSource from './DnDSource'
 import DnDContext from './DnDContext'
@@ -49,6 +49,7 @@ import CellUnits from './CellUnits'
 import SummaryPos from './SummaryPos'
 import SchedulerData from './SchedulerData'
 import DemoData from './DemoData'
+
 const RadioButton = Radio.Button;
 const RadioGroup = Radio.Group;
 
@@ -272,7 +273,7 @@ class Scheduler extends Component {
                     </td>
                 </tr>
             );
-        };
+        }
 
         let popover = <div className="popover-calendar"><Calendar fullscreen={false} onSelect={this.onSelect}/></div>;
         let schedulerHeader = <div />;

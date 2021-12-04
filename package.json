@@ -1,6 +1,6 @@
 {
   "name": "new-react-big-scheduler",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A scheduler and resource planning component built for React and made for modern browsers (IE10+)",
   "keywords": [
     "scheduler",
@@ -29,7 +29,7 @@
   "license": "MIT",
   "config": {},
   "scripts": {
-    "clean": "rimraf ./dist && mkdir dist",
+    "clean": "rimraf ./lib && mkdir lib",
     "build": "node scripts/build.js",
     "clean:exampledist": "rimraf ./exampledist/static",
     "build:exampledist": "npm run clean:exampledist && cpy src/css/style.css exampledist/static && cross-env NODE_ENV=production webpack --config ./webpack/webpack.config.js",
