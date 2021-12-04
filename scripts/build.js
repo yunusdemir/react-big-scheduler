@@ -46,27 +46,27 @@ async function build() {
     process.stdout.write('Copying library style definitions... \n');
     const cssResult = await exec(`cpy ${sourceDir}/css/style.css ${cssTarget}`);
 
-    // compile antd-hack less into css and copy it into lib
-    process.stdout.write('Implementing antd hack... \n');
-    const heckResult = await exec(
-      `lessc --js ${hackFileSource} ${hackFileOutputPath}`
-    );
-    // append lib/index.js with line importing antd-hack
-    const linesToBeAdded = [
-      '',
-      '',
-      '// this line has been added by scripts/build.js',
-      "require('./css/antd-globals-hiding-hack.css');",
-      '',
-    ]
-    await appendFile(
-      `${targetDir}/index.js`,
-      linesToBeAdded.join('\n')
-    );
+    // // compile antd-hack less into css and copy it into lib
+    // process.stdout.write('Implementing antd hack... \n');
+    // const heckResult = await exec(
+    //   `lessc --js ${hackFileSource} ${hackFileOutputPath}`
+    // );
+    // // append lib/index.js with line importing antd-hack
+    // const linesToBeAdded = [
+    //   '',
+    //   '',
+    //   '// this line has been added by scripts/build.js',
+    //   "require('./css/antd-globals-hiding-hack.css');",
+    //   '',
+    // ]
+    // await appendFile(
+    //   `${targetDir}/index.js`,
+    //   linesToBeAdded.join('\n')
+    // );
 
     process.stdout.write('Success! \n');
   } catch (e) {
-    process.stderr.write(e)
+    process.stderr.write(e.toString())
     process.exit()
   }
 }
