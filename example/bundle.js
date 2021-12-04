@@ -1,6 +1,7 @@
-import React, {Component} from 'react'
+import React from 'react'
 import {render} from 'react-dom'
-import {HashRouter as Router, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {Routes} from 'react-router'
 import Basic from './Basic'
 import Readonly from './Readonly'
 import Locale from './Locale'
@@ -25,27 +26,29 @@ import CustomPopoverStyle from './CustomPopoverStyle'
 
 render((
     <Router>
-        <Route exact path="/" component={Basic}/>
-        <Route path="/readonly" component={Readonly}/>
-        <Route path="/locale" component={Locale}/>
-        <Route path="/views" component={Views}/>
-        <Route path="/customheader" component={CustomHeader}/>
-        <Route path="/customeventstyle" component={CustomEventStyle} />
-        <Route path="/addresource" component={AddResource} />
-        <Route path="/draganddrop" component={DragAndDrop} />
-        <Route path="/summary" component={Summary} />
-        <Route path="/addmore" component={AddMore} />
-        <Route path="/overlapcheck" component={OverlapCheck} />
-        <Route path="/nocrossslotmove" component={NoCrossSlotMove} />
-        <Route path="/freezefirstrow" component={FreezeFirstRow} />
-        <Route path="/resourceclickable" component={ResourceClickable} />
-        <Route path="/comingsoon" component={ComingSoon}/>
-        <Route path="/customtableheaders" component={CustomTableHeaders}/>
-        <Route path="/hideweekends" component={HideWeekends}/>
-        <Route path="/customtimewindow" component={CustomTimeWindow}/>
-        <Route path="/infinitescroll" component={InfiniteScroll}/>
-        <Route path="/infinitescroll2" component={InfiniteScroll2}/>
-        <Route path="/custompopover" component={CustomPopoverStyle}/>
+        <Routes>
+            <Route exact path="/" element={<Basic />}/>
+            <Route path="/readonly" element={<Readonly />}/>
+            <Route path="/locale" element={<Locale />}/>
+            <Route path="/views" element={<Views />}/>
+            <Route path="/customheader" element={<CustomHeader />}/>
+            <Route path="/customeventstyle" element={<CustomEventStyle />}/>
+            <Route path="/addresource" element={<AddResource />}/>
+            <Route path="/draganddrop" element={<DragAndDrop />}/>
+            <Route path="/summary" element={<Summary />}/>
+            <Route path="/addmore" element={<AddMore />}/>
+            <Route path="/overlapcheck" element={<OverlapCheck />}/>
+            <Route path="/nocrossslotmove" element={<NoCrossSlotMove />}/>
+            <Route path="/freezefirstrow" element={<FreezeFirstRow />}/>
+            <Route path="/resourceclickable" element={<ResourceClickable />}/>
+            <Route path="/comingsoon" element={<ComingSoon />}/>
+            <Route path="/customtableheaders" element={<CustomTableHeaders />}/>
+            <Route path="/hideweekends" element={<HideWeekends />}/>
+            <Route path="/customtimewindow" element={<CustomTimeWindow />}/>
+            <Route path="/infinitescroll" element={<InfiniteScroll />}/>
+            <Route path="/infinitescroll2" element={<InfiniteScroll2 />}/>
+            <Route path="/custompopover" element={<CustomPopoverStyle />}/>
+        </Routes>
     </Router>
 ), document.getElementById('root'))
 
