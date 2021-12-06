@@ -1,5 +1,5 @@
 export default EventItemPopover;
-declare class EventItemPopover extends Component<any, any, any> {
+declare class EventItemPopover extends React.Component<any, any, any> {
     static propTypes: {
         schedulerData: any;
         eventItem: any;
@@ -16,4 +16,5 @@ declare class EventItemPopover extends Component<any, any, any> {
     };
     constructor(props: any);
 }
-import { Component } from "react";
+
+import React from "react";

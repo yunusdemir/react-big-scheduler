@@ -1,8 +1,9 @@
 export default BodyView;
-declare class BodyView extends Component<any, any, any> {
+declare class BodyView extends React.Component<any, any, any> {
     static propTypes: {
         schedulerData: any;
     };
     constructor(props: any);
 }
-import { Component } from "react";
+
+import React from "react";

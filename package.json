@@ -1,6 +1,6 @@
 {
   "name": "new-react-big-scheduler",
-  "version": "0.3.4",
+  "version": "0.3.6",
   "description": "A scheduler and resource planning component built for React and made for modern browsers (IE10+)",
   "keywords": [
     "scheduler",
@@ -31,9 +31,9 @@
   "scripts": {
     "clean": "rimraf ./lib && mkdir lib",
     "build": "node scripts/build.js",
-    "clean:exampledist": "rimraf ./exampledist/static",
-    "build:exampledist": "npm run clean:exampledist && cpy src/css/style.css exampledist/static && cross-env NODE_ENV=production webpack --config ./webpack/webpack.config.js",
-    "example": "webpack-dev-server --config ./webpack/webpack-dev.config.js --hot",
+    "clean:dist": "rimraf ./dist/static",
+    "build:dist": "npm run clean:dist && cpy src/css/style.css dist/static && cross-env NODE_ENV=production webpack --config ./webpack/webpack.config.js",
+    "example": "cpy dist/static example/static  && webpack-dev-server --config ./webpack/webpack-dev.config.js --hot",
     "analyz": "cross-env NODE_ENV=production npm_config_report=true npm run build",
     "build:dll": "cross-env NODE_ENV=production webpack --config ./webpack/webpack.dll.config.js"
   },
@@ -41,6 +41,7 @@
     "lint"
   ],
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "antd": "^4.17.2",
     "cpy": "^8.1.2",
     "moment": "^2.29.1",

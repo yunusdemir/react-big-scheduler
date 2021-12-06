@@ -1,5 +1,5 @@
 export default Summary;
-declare class Summary extends Component<any, any, any> {
+declare class Summary extends React.Component<any, any, any> {
     static propTypes: {
         schedulerData: any;
         summary: any;
@@ -9,4 +9,5 @@ declare class Summary extends Component<any, any, any> {
     };
     constructor(props: any);
 }
-import { Component } from "react";
+
+import React from "react";

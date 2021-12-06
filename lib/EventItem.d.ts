@@ -1,5 +1,5 @@
 export default EventItem;
-declare class EventItem extends Component<any, any, any> {
+declare class EventItem extends React.Component<any, any, any> {
     static propTypes: {
         schedulerData: any;
         eventItem: any;
@@ -41,4 +41,5 @@ declare class EventItem extends Component<any, any, any> {
     endResizable: (props: any) => boolean;
     subscribeResizeEvent: (props: any) => void;
 }
-import { Component } from "react";
+
+import React from "react";

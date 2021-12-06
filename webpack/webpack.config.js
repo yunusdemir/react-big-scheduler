@@ -11,7 +11,7 @@ module.exports = {
         bundle: [root + "/example/bundle.js"],
     },
     output: {
-        path: root + "/exampledist/static",
+        path: root + "/dist/static",
         filename: '[name].js'
     },
     resolve: {
@@ -66,7 +66,7 @@ module.exports = {
         ),
         // new webpack.DllReferencePlugin({
         //     context: root,
-        //     manifest: require('../exampledist/static/vendors-manifest.json')
+        //     manifest: require('../dist/static/vendors-manifest.json')
         // }),
         // new webpack.optimize.OccurrenceOrderPlugin(),
         // new webpack.optimize.UglifyJsPlugin({

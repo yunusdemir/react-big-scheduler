@@ -1,5 +1,5 @@
 export default SelectedArea;
-declare class SelectedArea extends Component<any, any, any> {
+declare class SelectedArea extends React.Component<any, any, any> {
     static propTypes: {
         schedulerData: any;
         left: any;
@@ -7,4 +7,5 @@ declare class SelectedArea extends Component<any, any, any> {
     };
     constructor(props: any);
 }
-import { Component } from "react";
+
+import React from "react";

@@ -1,5 +1,5 @@
 export default AddMore;
-declare class AddMore extends Component<any, any, any> {
+declare class AddMore extends React.Component<any, any, any> {
     static propTypes: {
         schedulerData: any;
         number: any;
@@ -11,4 +11,5 @@ declare class AddMore extends Component<any, any, any> {
     };
     constructor(props: any);
 }
-import { Component } from "react";
+
+import React from "react";

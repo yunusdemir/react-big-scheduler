@@ -1,5 +1,5 @@
 export default ResourceView;
-declare class ResourceView extends Component<any, any, any> {
+declare class ResourceView extends React.Component<any, any, any> {
     static propTypes: {
         schedulerData: any;
         contentScrollbarHeight: any;
@@ -9,4 +9,5 @@ declare class ResourceView extends Component<any, any, any> {
     };
     constructor(props: any);
 }
-import { Component } from "react";
+
+import React from "react";

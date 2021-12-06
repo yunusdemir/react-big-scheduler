@@ -14,13 +14,13 @@ module.exports = {
 
     output: {
         filename: '[name].dll.js',
-        path: root + "/exampledist/static",
+        path: root + "/dist/static",
         library
     },
 
     plugins: [
         new webpack.DllPlugin({
-            path: path.join(root, 'exampledist/static/[name]-manifest.json'),
+            path: path.join(root, 'dist/static/[name]-manifest.json'),
             // This must match the output.library option above
             name: library
         }),

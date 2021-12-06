@@ -1,5 +1,5 @@
 export default class SchedulerData {
-    constructor(date?: any, viewType?: number, showAgenda?: boolean, isEventPerspective?: boolean, newConfig?: any, newBehaviors?: any, localeMoment?: any);
+    constructor(date?: string, viewType?: number, showAgenda?: boolean, isEventPerspective?: boolean, newConfig?: any, newBehaviors?: any, localeMoment?: any);
     resources: any[];
     events: any[];
     eventGroups: any[];
@@ -29,7 +29,7 @@ export default class SchedulerData {
     setScrollToSpecialMoment(scrollToSpecialMoment: any): void;
     prev(): void;
     next(): void;
-    setDate(date?: any): void;
+    setDate(date?: string): void;
     setViewType(viewType?: number, showAgenda?: boolean, isEventPerspective?: boolean): void;
     startDate: any;
     endDate: any;

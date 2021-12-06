@@ -1,14 +1,11 @@
-export default AddMorePopover;
-declare class AddMorePopover extends Component<any, any, any> {
+export default AgendaEventItem;
+declare class AgendaEventItem extends React.Component<any, any, any> {
     static propTypes: {
         schedulerData: any;
-        headerItem: any;
-        left: any;
-        top: any;
-        height: any;
-        closeAction: any;
+        eventItem: any;
+        isStart: any;
+        isEnd: any;
         subtitleGetter: any;
-        moveEvent: any;
         eventItemClick: any;
         viewEventClick: any;
         viewEventText: any;
@@ -18,4 +15,5 @@ declare class AddMorePopover extends Component<any, any, any> {
     };
     constructor(props: any);
 }
-import { Component } from "react";
+
+import React from "react";

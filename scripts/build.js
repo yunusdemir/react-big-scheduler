@@ -49,24 +49,6 @@ async function build() {
     process.stdout.write('Creating typescript type definitions... \n');
     const tscResult = await exec(`npx tsc`);
 
-    // compile antd-hack less into css and copy it into lib
-    process.stdout.write('Implementing antd hack... \n');
-    const hackResult = await exec(
-      `lessc --js ${hackFileSource} ${hackFileOutputPath}`
-    );
-    // append dist/index.js with line importing antd-hack
-    const linesToBeAdded = [
-      '',
-      '',
-      '// this line has been added by scripts/build.js',
-      "require('./css/antd-globals-hiding-hack.css');",
-      '',
-    ]
-    await appendFile(
-      `${targetDir}/index.js`,
-      linesToBeAdded.join('\n')
-    );
-
     process.stdout.write('Success! \n');
   } catch (e) {
     process.stderr.write(e.toString())

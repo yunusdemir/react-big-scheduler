@@ -1,5 +1,5 @@
 export default ResourceEvents;
-declare class ResourceEvents extends Component<any, any, any> {
+declare class ResourceEvents extends React.Component<any, any, any> {
     static propTypes: {
         resourceEvents: any;
         schedulerData: any;
@@ -28,4 +28,5 @@ declare class ResourceEvents extends Component<any, any, any> {
     eventContainerRef: (element: any) => void;
     eventContainer: any;
 }
-import { Component } from "react";
+
+import React from "react";

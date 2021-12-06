@@ -1,5 +1,5 @@
 export default AgendaResourceEvents;
-declare class AgendaResourceEvents extends Component<any, any, any> {
+declare class AgendaResourceEvents extends React.Component<any, any, any> {
     static propTypes: {
         schedulerData: any;
         resourceEvents: any;
@@ -14,4 +14,5 @@ declare class AgendaResourceEvents extends Component<any, any, any> {
     };
     constructor(props: any);
 }
-import { Component } from "react";
+
+import React from "react";
