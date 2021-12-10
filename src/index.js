@@ -56,7 +56,7 @@ class Scheduler extends Component {
     constructor(props) {
         super(props);
 
-        const {schedulerData, dndSources, width} = props;
+        const {schedulerData, dndSources} = props;
         let sources = [];
         sources.push(new DnDSource((props) => {
             return props.eventItem;
@@ -67,6 +67,7 @@ class Scheduler extends Component {
         let dndContext = new DnDContext(sources, ResourceEvents);
 
         this.currentArea = -1;
+        schedulerData._setDocumentWidth(document.documentElement.clientWidth);
 
         this.state = {
             visible: false,

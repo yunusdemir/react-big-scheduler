@@ -1,5 +1,5 @@
 export default class SchedulerData {
-    constructor(date?: string, viewType?: number, showAgenda?: boolean, isEventPerspective?: boolean, newConfig?: any, newBehaviors?: any, localeMoment?: any, documentWidth?: number);
+    constructor(date?: string, viewType?: number, showAgenda?: boolean, isEventPerspective?: boolean, newConfig?: any, newBehaviors?: any, localeMoment?: any);
     resources: any[];
     events: any[];
     eventGroups: any[];

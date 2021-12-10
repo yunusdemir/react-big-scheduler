@@ -8,7 +8,7 @@ export default class SchedulerData {
     constructor(date=moment().format(DATE_FORMAT), viewType = ViewTypes.Week,
                 showAgenda = false, isEventPerspective = false,
                 newConfig = undefined, newBehaviors = undefined,
-                localeMoment = undefined, documentWidth = 0) {
+                localeMoment = undefined) {
         this.resources = [];
         this.events = [];
         this.eventGroups = [];
@@ -19,7 +19,7 @@ export default class SchedulerData {
         this.isEventPerspective = isEventPerspective;
         this.resizing = false;
         this.scrollToSpecialMoment = false;
-        this.documentWidth = documentWidth;
+        this.documentWidth = 0;
 
         this.localeMoment = moment;
         if(!!localeMoment)
