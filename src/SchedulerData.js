@@ -1,14 +1,14 @@
 import moment from 'moment'
-import {RRuleSet,rrulestr} from 'rrule'
+import {RRuleSet, rrulestr} from 'rrule'
 import config from './config'
 import behaviors from './behaviors'
-import {ViewTypes, CellUnits, DATE_FORMAT, DATETIME_FORMAT} from './index'
+import {CellUnits, DATE_FORMAT, DATETIME_FORMAT, ViewTypes} from './index'
 
 export default class SchedulerData {
     constructor(date=moment().format(DATE_FORMAT), viewType = ViewTypes.Week,
                 showAgenda = false, isEventPerspective = false,
                 newConfig = undefined, newBehaviors = undefined,
-                localeMoment = undefined) {        
+                localeMoment = undefined, documentWidth = 0) {
         this.resources = [];
         this.events = [];
         this.eventGroups = [];
@@ -19,7 +19,7 @@ export default class SchedulerData {
         this.isEventPerspective = isEventPerspective;
         this.resizing = false;
         this.scrollToSpecialMoment = false;
-        this.documentWidth = 0;
+        this.documentWidth = documentWidth;
 
         this.localeMoment = moment;
         if(!!localeMoment)
